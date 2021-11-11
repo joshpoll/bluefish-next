@@ -6,7 +6,7 @@
   "scripts": {
     "check:ts": "tsc --noEmit",
     "dev": "next dev",
-    "build": "yarn check:ts && esbuild src/index.ts --bundle --outdir=dist && tsc --emitDeclarationOnly --outDir dist",
+    "build": "yarn check:ts && webpack ./src/index.ts",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,13 +14,16 @@
     "esbuild": "^0.13.13",
     "next": "12.0.3",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "ts-loader": "^9.2.6"
   },
   "devDependencies": {
     "@types/node": "16.11.7",
     "@types/react": "17.0.34",
     "eslint": "7",
     "eslint-config-next": "12.0.3",
-    "typescript": "4.4.4"
+    "typescript": "4.4.4",
+    "webpack": "^5.64.0",
+    "webpack-cli": "^4.9.1"
   }
 }
