@@ -6,7 +6,7 @@
   "scripts": {
     "check:ts": "tsc --noEmit",
     "dev": "next dev",
-    "build": "yarn check:ts && esbuild src/index.ts --bundle --outdir=dist",
+    "build": "yarn check:ts && esbuild src/index.ts --bundle --outdir=dist && tsc --emitDeclarationOnly --outDir dist",
     "start": "next start",
     "lint": "next lint"
   },
